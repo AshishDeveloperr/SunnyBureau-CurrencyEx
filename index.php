@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Currency Excahnge</title>
+    <title>Sunny Bureau de Change</title>
     <style>
       *{
     font-family: 'Poppins', sans serif;
@@ -25,19 +25,19 @@
 <body class="h-screen">
 
   <!-- header starts -->
-  <div class="w-full flex justify-center">
-      <div>
-        <img src="img/currency.png" alt="logo" class="w-80">
-        <span class="text-xl font-bold justify-center flex -mt-14"><?php $date = date("dS F Y"); echo "$date" ?></span> 
+  <div class="w-full flex justify-center pb-5">
+      <div class="container"><a href="index.php" class=" flex justify-center md:block md:justify-start">
+        <img src="img/sunny.jpg" alt="logo" class="w-32 pt-8 md:w-36 md:pb-0  md:justify-start"></a>
+        <p class="text-2xl md:text-3xl font-bold pt-3 pl-3 flex justify-center items-center md:-mt-16 md:pb-7">Sunny Bureau de Change</p>
       </div>
   </div>
   <!-- currency starts -->
-  <div class="container mx-auto pt-8">
+  <div class="container mx-auto p-8 md:p-0 mt-5">
       <div class="flex flex-col md:flex-row  gap-8 p-5">
         <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
           <div class="w-2/3">
             <img src="img/british.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">CURRENCY - GBP</p>
+            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">GBP</p>
           </div>
           <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
             <div class="w-1/2 flex flex-col mx-auto">
@@ -82,7 +82,7 @@
         <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
           <div class="w-2/3">
             <img src="img/usa.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">CURRENCY - USD</p>
+            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">USD</p>
           </div>
           <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
             <div class="w-1/2 flex flex-col mx-auto">
@@ -126,12 +126,12 @@
     </div>
   </div>
   <!-- card 3 starts -->
-  <div class="container mx-auto ">
+  <div class="container mx-auto p-8 md:p-0">
       <div class="flex flex-col md:flex-row  gap-8 p-5">
         <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
           <div class="w-2/3">
             <img src="img/europe.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">CURRENCY - EUR</p>
+            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">EUR</p>
           </div>
           <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
             <div class="w-1/2 flex flex-col mx-auto">
@@ -176,7 +176,7 @@
         <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
           <div class="w-2/3">
             <img src="img/south-africa.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">CURRENCY - ZAR</p>
+            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">ZAR</p>
           </div>
           <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
             <div class="w-1/2 flex flex-col mx-auto">
@@ -218,6 +218,7 @@
           </div>
         </div>
     </div>
+    <span class="text-2xl font-bold justify-end flex pr-5 pt-7"><?php $date = date("dS F Y"); echo "$date" ?></span> 
   </div>
   <div class="w-full bg-black p-5 lg:absolute bottom-0">
     <p class="text-white text-xl text-center">Copyright-2023</p> 
