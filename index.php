@@ -32,19 +32,30 @@
       </div>
   </div>
   <!-- currency starts -->
-  <div class="container mx-auto p-8 md:p-0 mt-5">
-      <div class="flex flex-col md:flex-row  gap-8 p-5">
-        <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
-          <div class="w-2/3">
-            <img src="img/british.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">GBP</p>
-          </div>
-          <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-10 border border-green-700 rounded text-center mx-auto">
-                BUY
-              </button>
-              <h1 class="text-black text-2xl font-bold py-2 mx-auto">
+  <div class="container mx-auto p-8 md:p-8 mt-5">
+    
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 ">
+        <thead class="text-xs text-gray-700 uppercase">
+            <tr class="border-b border-gray-200">
+                <th scope="col" class="px-6 py-3 font-semibold text-lg bg-gray-50 w-2/5">
+                Currency
+                </th>
+                <th scope="col" class="px-6 py-3 font-semibold text-lg text-white bg-green-500 text-center">
+                    Buy
+                </th>
+                <th scope="col" class="px-6 py-3 font-semibold text-lg text-white bg-red-500 text-center">
+                    Sell
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200">
+                <th scope="row" class="px-6 py-4 md:flex font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                    <img src="img/british.png" class="w-32" alt="" srcset="">
+                    <span class="font-bold text-xl md:p-6 mx-auto flex justify-center md:mx-0">GBP</span>
+                </th>
+                <td class="px-6 py-4 text-center font-semibold text-lg">
                 <!-- buy price -->
               <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 1';
                 $result = mysqli_query($conn, $sql);
@@ -56,14 +67,10 @@
                   echo 'error';
                 } ?>
                 <!-- buy price -->
-              </h1>
-            </div>
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-10 border border-red-700 rounded text-center mx-auto">
-                SELL
-            </button>
-            <h1 class="text-black text-2xl font-bold py-2 mx-auto">
-              <!-- sell price -->
+                </td>
+                
+                <td class="px-6 py-4 text-center bg-gray-50 font-semibold text-lg">
+                    <!-- sell price -->
             <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 1';
                 $result = mysqli_query($conn, $sql);
                 if($result){
@@ -74,22 +81,14 @@
                   echo 'error';
                 } ?>
                 <!-- sell price -->
-              </h1>
-            </div>
-          </div>
-        </div>
-        <!-- card 2 starts -->
-        <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
-          <div class="w-2/3">
-            <img src="img/usa.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">USD</p>
-          </div>
-          <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-10 border border-green-700 rounded text-center mx-auto">
-                BUY
-              </button>
-              <h1 class="text-black text-2xl font-bold py-2 mx-auto">
+                </td>
+            </tr>
+            <tr class="border-b border-gray-200">
+                <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                <img src="img/usa.png" class="w-32" alt="" srcset="">
+                    <span class="font-bold text-xl md:p-6 mx-auto flex justify-center md:mx-0">USD</span>
+                </th>
+                <td class="px-6 py-4 text-center font-semibold text-lg">
                 <!-- buy price -->
               <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 2';
                 $result = mysqli_query($conn, $sql);
@@ -101,14 +100,10 @@
                   echo 'error';
                 } ?>
                 <!-- buy price -->
-              </h1>
-            </div>
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-10 border border-red-700 rounded text-center mx-auto">
-              SELL
-            </button>
-            <h1 class="text-black text-2xl font-bold py-2 mx-auto">
-                <!-- sell price -->
+                </td>
+             
+                <td class="px-6 py-4 text-center bg-gray-50 font-semibold text-lg">
+                    <!-- sell price -->
             <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 2';
                 $result = mysqli_query($conn, $sql);
                 if($result){
@@ -119,26 +114,14 @@
                   echo 'error';
                 } ?>
                 <!-- sell price -->
-              </h1>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
-  <!-- card 3 starts -->
-  <div class="container mx-auto p-8 md:p-0">
-      <div class="flex flex-col md:flex-row  gap-8 p-5">
-        <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
-          <div class="w-2/3">
-            <img src="img/europe.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">EUR</p>
-          </div>
-          <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-10 border border-green-700 rounded text-center mx-auto">
-                BUY
-              </button>
-              <h1 class="text-black text-2xl font-bold py-2 mx-auto">
+                </td>
+            </tr>
+            <tr class="border-b border-gray-200">
+                <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                <img src="img/europe.png" class="w-32" alt="" srcset="">
+                    <span class="font-bold text-xl md:p-6 mx-auto flex justify-center md:mx-0">EUR</span>
+                </th>
+                <td class="px-6 py-4 text-center font-semibold text-lg">
                 <!-- buy price -->
               <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 3';
                 $result = mysqli_query($conn, $sql);
@@ -150,14 +133,10 @@
                   echo 'error';
                 } ?>
                 <!-- buy price -->
-              </h1>
-            </div>
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-10 border border-red-700 rounded text-center mx-auto">
-              SELL
-            </button>
-            <h1 class="text-black text-2xl font-bold py-2 mx-auto">
-                <!-- sell price -->
+                </td>
+              
+                <td class="px-6 py-4 text-center bg-gray-50 font-semibold text-lg">
+                    <!-- sell price -->
             <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 3';
                 $result = mysqli_query($conn, $sql);
                 if($result){
@@ -168,22 +147,14 @@
                   echo 'error';
                 } ?>
                 <!-- sell price -->
-              </h1>
-            </div>
-          </div>
-        </div>
-        <!-- card 4 starts -->
-        <div class="p-8 w-full md:w-1/2 neo rounded-xl flex flex-col md:flex-row items-center">
-          <div class="w-2/3">
-            <img src="img/south-africa.png" alt="british" class="w-44 mx-auto md:mx-0">
-            <p class="text-xl font-semibold pt-3 pb-3 text-center md:text-start text-[#187CA5]">ZAR</p>
-          </div>
-          <div class="w-full md:w-1/2 flex flex-row  justify-center items-center md:gap-3 gap-0">
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-10 border border-green-700 rounded text-center mx-auto">
-                BUY
-              </button>
-              <h1 class="text-black text-2xl font-bold py-2 mx-auto">
+                </td>
+            </tr>
+            <tr class="border-b border-gray-200">
+                <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                <img src="img/south-africa.png" class="w-32" alt="" srcset="">
+                    <span class="font-bold text-xl md:p-6 mx-auto flex justify-center md:mx-0">ZAR</span>
+                </th>
+                <td class="px-6 py-4 text-center font-semibold text-lg">
                 <!-- buy price -->
               <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 4';
                 $result = mysqli_query($conn, $sql);
@@ -195,14 +166,10 @@
                   echo 'error';
                 } ?>
                 <!-- buy price -->
-              </h1>
-            </div>
-            <div class="w-1/2 flex flex-col mx-auto">
-              <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-10 border border-red-700 rounded text-center mx-auto">
-              SELL
-            </button>
-            <h1 class="text-black text-2xl font-bold py-2 mx-auto">
-                <!-- sell price -->
+                </td>
+               
+                <td class="px-6 py-4 text-center bg-gray-50 font-semibold text-lg">
+                    <!-- sell price -->
             <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 4';
                 $result = mysqli_query($conn, $sql);
                 if($result){
@@ -213,16 +180,18 @@
                   echo 'error';
                 } ?>
                 <!-- sell price -->
-              </h1>
-            </div>
-          </div>
-        </div>
-    </div>
-    <span class="text-2xl font-bold justify-end flex pr-5 pt-7"><?php $date = date("dS F Y"); echo "$date" ?></span> 
+                </td>
+            </tr>
+          
+        </tbody>
+    </table>
+</div>
+
   </div>
-  <div class="w-full bg-black p-5 lg:absolute bottom-0">
+  <!-- currency ends -->
+  <!-- <div class="w-full bg-black p-5 md:absolute bottom-0">
     <p class="text-white text-xl text-center">Copyright-2023</p> 
-  </div>
+  </div> -->
 
 </body>
 </html>
