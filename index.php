@@ -24,13 +24,21 @@
 </head>
 <body class="h-screen">
 
+<div class="w-full py-8 ">
+  <div class="grid grid-cols-3">
+      <div class="col-span-3 md:col-span-1 px-10 flex justify-center md:justify-normal"><img src="img/sunny.jpg" alt="logo" class="w-56"></div>
+      <div class="flex col-span-3 md:col-span-2 px-14 justify-center md:justify-normal md:pt-24"> <p class="text-2xl md:text-4xl font-bold pt-3 pl-3 flex justify-center items-center md:-mt-16 md:pb-7">Sunny Bureau de Change</p></div>
+  </div>
+</div>
+
+
   <!-- header starts -->
-  <div class="w-full flex justify-center pb-5">
+  <!-- <div class="w-full flex justify-center pb-5">
       <div class="container"><a href="index.php" class=" flex justify-center md:block md:justify-start">
         <img src="img/sunny.jpg" alt="logo" class="w-32 pt-8 md:w-36 md:pb-0  md:justify-start"></a>
         <p class="text-2xl md:text-3xl font-bold pt-3 pl-3 flex justify-center items-center md:-mt-16 md:pb-7">Sunny Bureau de Change</p>
       </div>
-  </div>
+  </div> -->
   <!-- currency starts -->
   <div class="container mx-auto p-8 md:p-8 mt-5">
     
@@ -185,13 +193,14 @@
           
         </tbody>
     </table>
+    <span class="text-2xl font-bold justify-end flex pr-5 py-6"><?php $date = date("dS F Y"); echo "$date" ?></span> 
 </div>
 
   </div>
   <!-- currency ends -->
-  <!-- <div class="w-full bg-black p-5 md:absolute bottom-0">
-    <p class="text-white text-xl text-center">Copyright-2023</p> 
-  </div> -->
+  <div class="w-full bg-gray-100 p-5 absolute bottom-0">
+    <p class="text-gray-900 text-xl text-center font-semibold">Sunny Group Of Companies(c) Copyright-2023</p> 
+  </div>
 
 </body>
 </html>
