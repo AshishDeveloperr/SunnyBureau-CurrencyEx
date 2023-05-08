@@ -22,7 +22,7 @@
             }
     </style>
 </head>
-<body class="h-screen"><!--screen-->
+<body class="h-screen">
 
 <div class="w-full py-8 ">
   <div class="grid grid-cols-3">
