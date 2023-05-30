@@ -79,14 +79,13 @@
     </style>
 </head>
 <body class="h-screen bg-[#0F172A]">
-
 <div class="w-full py-2">
   <div class="grid grid-cols-4">
       <div class="col-span-4 md:col-span-1 px-10 flex justify-center md:justify-normal"><img src="img/logo-transparent.png" alt="logo" class="w-52"></div>
       <div class="flex col-span-4 md:col-span-3 px-1 justify-center md:justify-normal md:pt-24"> <p class="text-2xl text-white md:text-4xl xl:text-5xl  font-bold pt-3 flex justify-center items-center md:-mt-16 md:pb-1 2xl:pl-36">Sunny Bureau de Change</p></div>
   </div>
   <div class="container mx-auto">
-      <p class="text-center text-white text-2xl md:text-5xl xl:text-5xl font-bold -mt-7">TODAYS FOREIGN EXCHANGE RATES:</p>
+      <p class="text-center text-white text-2xl md:text-5xl xl:text-5xl font-bold lg:-mt-7">TODAYS FOREIGN EXCHANGE RATES:</p>
   </div>
 </div>
 
@@ -99,7 +98,7 @@
       </div>
   </div> -->
   <!-- currency starts -->
-<div class="container mx-auto p-16 md:p-8 mt-5">
+<div class="container mx-auto p-2 md:p-8 mt-5">
     
   <div class="relative overflow-x-auto shadow-box">
       <table class="w-full text-sm text-left">
@@ -257,7 +256,7 @@
 
 </div>
   <!-- currency ends -->
-  <div class="w-full bg-[#0F172A] p-5   bottom-0 shadow-2xl shadow-gray-600">
+  <div class="w-full bg-[#0F172A] p-5   bottom-0 ">
     <p class="text-white text-xl text-center font-semibold">Sunny Group Of Companies(c) Copyright-2023</p> 
   </div>
 
