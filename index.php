@@ -260,5 +260,20 @@
     <p class="text-white text-xl text-center font-semibold">Sunny Group Of Companies(c) Copyright-2023</p> 
   </div>
 
+
+  <script>
+  // Function to refresh the page after 10 seconds
+  function refreshPage() {
+    setTimeout(function () {
+      location.reload();
+    }, 10000); // 10 seconds = 10,000 milliseconds
+  }
+
+  // Call the refreshPage function
+  refreshPage();
+</script>
+
+
+
 </body>
 </html>

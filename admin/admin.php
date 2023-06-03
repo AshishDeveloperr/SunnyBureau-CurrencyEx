@@ -53,7 +53,6 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
           <!-- update php -->
               <?php
-              // if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(isset($_POST['GBPbuybtn'])){
                 $GBPbuyPrice = $_POST['gbp-buyPrice'];
                 $GBPsellPrice = $_POST['gbp-sellPrice'];
@@ -66,7 +65,6 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                   echo "error";
                 }
               }
-              // }
               ?>
             <form action="" method="POST" class="md:w-2/3 flex flex-col mx-auto">
               <div class="flex pb-4">
@@ -285,4 +283,5 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 }
 
 </script>
+
 </html>
