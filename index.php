@@ -74,14 +74,14 @@
     </style>
 </head>
 <body class="h-screen bg-[#0F172A]">
-<div class="w-full py-2">
+<div class="w-full">
   <div class="grid grid-cols-4">
       <div class="col-span-4 md:col-span-1 px-10 flex justify-center md:justify-normal"><img src="img/logo-transparent.png" alt="logo" class="w-52"></div>
       <div class="flex col-span-4 md:col-span-3 px-1 justify-center md:justify-normal md:pt-24"></div>
   </div>
   <div class="container mx-auto">
       <p class="text-2xl text-white md:text-4xl xl:text-5xl  font-bold pt-3 flex justify-center items-center md:-mt-16 md:pb-5 lg:-mt-36">Sunny Bureau de Change</p>
-      <p class="text-center text-white text-2xl md:text-5xl xl:text-5xl font-bold">Today's Foreign Exchange Rates:</p>
+      <p class="text-center text-white text-2xl md:text-3xl xl:text-3xl font-bold">Today's Foreign Exchange Rates:</p>
   </div>
 </div>
 
