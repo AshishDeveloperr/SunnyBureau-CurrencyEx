@@ -75,7 +75,7 @@
 </head>
 <body class="h-screen bg-[#0F172A]">
 <div class="w-full">
-  <div class="grid grid-cols-4">
+  <div class="grid grid-cols-4 -mt-7">
       <div class="col-span-4 md:col-span-1 px-10 flex justify-center md:justify-normal"><img src="img/logo-transparent.png" alt="logo" class="w-52"></div>
       <div class="flex col-span-4 md:col-span-3 px-1 justify-center md:justify-normal md:pt-24"></div>
   </div>
@@ -107,7 +107,7 @@
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                       <img src="img/british.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-3xl text-white md:p-6 mx-auto flex justify-center md:mx-0">GBP</span>
+                      <span class="font-bold text-4xl text-white md:p-6 mx-auto flex justify-center md:mx-0">GBP</span>
                   </th>
                   <td class="px-6 py-4 text-center font-light text-6xl  neon-buy border border-white">
                   <!-- buy price -->
@@ -140,7 +140,7 @@
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                   <img src="img/usa.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-3xl text-white md:p-6 mx-auto flex justify-center md:mx-0">USD</span>
+                      <span class="font-bold text-4xl text-white md:p-6 mx-auto flex justify-center md:mx-0">USD</span>
                   </th>
                   <td class="px-6 py-4 text-center font-light text-6xl neon-buy border border-white">
                   <!-- buy price -->
@@ -173,7 +173,7 @@
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                   <img src="img/europe.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-3xl text-white md:p-6 mx-auto flex justify-center md:mx-0">EUR</span>
+                      <span class="font-bold text-4xl text-white md:p-6 mx-auto flex justify-center md:mx-0">EUR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-light text-6xl neon-buy border border-white">
                   <!-- buy price -->
@@ -206,7 +206,7 @@
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                   <img src="img/south-africa.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-3xl text-white md:p-6 mx-auto flex justify-center md:mx-0">ZAR</span>
+                      <span class="font-bold text-4xl text-white md:p-6 mx-auto flex justify-center md:mx-0">ZAR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-light text-6xl neon-buy border border-white">
                   <!-- buy price -->
@@ -251,14 +251,14 @@
 
 
   <script>
-  Function to refresh the page after 10 seconds
+  // Function to refresh the page after 10 seconds
   function refreshPage() {
     setTimeout(function () {
       location.reload();
-    }, 10000); // 10 seconds = 10,000 milliseconds
+    }, 300000); // 10 seconds = 10,000 milliseconds
   }
 
-  Call the refreshPage function
+  // Call the refreshPage function
   refreshPage();
 </script>
 
