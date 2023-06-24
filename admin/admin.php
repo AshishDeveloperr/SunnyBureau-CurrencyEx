@@ -10,28 +10,38 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 
 
-  if (isset($_POST['GBPbuybtn'])) {
-    $GBPbuyPrice = $_POST['gbp-buyPrice'];
-    $GBPsellPrice = $_POST['gbp-sellPrice'];
+if (isset($_POST['GBPbuybtn'])) {
+  $GBPbuyPrice = $_POST['gbp-buyPrice'];
+  $GBPsellPrice = $_POST['gbp-sellPrice'];
 
-
-  // Store the updated price values in session variables
-  $_SESSION['buyPrice'] = $GBPbuyPrice;
-  $_SESSION['sellPrice'] = $GBPsellPrice;
-
-  // Create an associative array with the price data
-  $priceData = [
-      'buyPrice' => $GBPbuyPrice,
-      'sellPrice' => $GBPsellPrice
-  ];
-
-  // Convert the price data to JSON format
-  $jsonData = json_encode($priceData);
-
-  // Store the JSON data in the price.json file
-  file_put_contents('price.json', $jsonData);
-
+  // Store the updated GBP price values in session variables
+  $_SESSION['GBPbuyPrice'] = $GBPbuyPrice;
+  $_SESSION['GBPsellPrice'] = $GBPsellPrice;
 }
+
+if (isset($_POST['USDbuybtn'])) {
+  $USDbuyPrice = $_POST['usd-buyPrice'];
+  $USDsellPrice = $_POST['usd-sellPrice'];
+
+  // Store the updated USD price values in session variables
+  $_SESSION['USDbuyPrice'] = $USDbuyPrice;
+  $_SESSION['USDsellPrice'] = $USDsellPrice;
+}
+
+// Create an associative array with the price data
+$priceData = [
+  'GBPbuyPrice' => $_SESSION['GBPbuyPrice'] ?? '',
+  'GBPsellPrice' => $_SESSION['GBPsellPrice'] ?? '',
+  'USDbuyPrice' => $_SESSION['USDbuyPrice'] ?? '',
+  'USDsellPrice' => $_SESSION['USDsellPrice'] ?? '',
+];
+
+// Convert the price data to JSON format
+$jsonData = json_encode($priceData);
+
+// Store the JSON data in the price.json file
+file_put_contents('price.json', $jsonData);
+
 
 ?>
 

@@ -120,7 +120,7 @@ session_start();
                       <img src="img/british.png" class="w-32" alt="" srcset="">
                       <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">GBP</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-gbp">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 1';
                   $result = mysqli_query($conn, $sql);
@@ -134,7 +134,7 @@ session_start();
                   <!-- buy price -->
                   </td>
                   
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-gbp">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 1';
                   $result = mysqli_query($conn, $sql);
@@ -153,7 +153,7 @@ session_start();
                   <img src="img/usa.png" class="w-32" alt="" srcset="">
                       <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">USD</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-usd">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 2';
                   $result = mysqli_query($conn, $sql);
@@ -167,7 +167,7 @@ session_start();
                   <!-- buy price -->
                   </td>
               
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-usd">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 2';
                   $result = mysqli_query($conn, $sql);
@@ -260,6 +260,7 @@ session_start();
     <p class="text-white text-xl text-center font-medium">Powered by <a href="https://unicybers.com/" class="text-blue-500">Unicybers</a></p> 
   </div>
 
+
   <script>
 function updatePrices() {
     var xhr = new XMLHttpRequest();
@@ -269,14 +270,16 @@ function updatePrices() {
                 var priceData = JSON.parse(xhr.responseText);
 
                 // Check if price data exists in the response
-                if (priceData && priceData.buyPrice && priceData.sellPrice) {
+                if (priceData && priceData.GBPbuyPrice && priceData.GBPsellPrice) {
                     // Update the price elements with the received data
-                    document.getElementById('buy-price').innerText = priceData.buyPrice;
-                    document.getElementById('sell-price').innerText = priceData.sellPrice;
-                } else {
-                    // Fallback to session variables if price data is missing
-                    document.getElementById('buy-price').innerText = "<?php echo $_SESSION['buyPrice'] ?? 'N/A'; ?>";
-                    document.getElementById('sell-price').innerText = "<?php echo $_SESSION['sellPrice'] ?? 'N/A'; ?>";
+                    document.getElementById('buy-price-gbp').innerText = priceData.GBPbuyPrice;
+                    document.getElementById('sell-price-gbp').innerText = priceData.GBPsellPrice;
+                }
+
+                if (priceData && priceData.USDbuyPrice && priceData.USDsellPrice) {
+                    // Update the price elements with the received data
+                    document.getElementById('buy-price-usd').innerText = priceData.USDbuyPrice;
+                    document.getElementById('sell-price-usd').innerText = priceData.USDsellPrice;
                 }
             } else {
                 console.error('Error: ' + xhr.status);
@@ -290,5 +293,7 @@ function updatePrices() {
 updatePrices();
 setInterval(updatePrices, 5000); // 5 seconds
 </script>
+
+
 </body>
 </html>
