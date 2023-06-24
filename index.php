@@ -260,32 +260,35 @@ session_start();
     <p class="text-white text-xl text-center font-medium">Powered by <a href="https://unicybers.com/" class="text-blue-500">Unicybers</a></p> 
   </div>
 
-
   <script>
 function updatePrices() {
-    // Make an AJAX request to get the latest price from the server
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                // Update the price elements with the received data
                 var priceData = JSON.parse(xhr.responseText);
-                document.getElementById('buy-price').innerText = priceData.buyPrice;
-                document.getElementById('sell-price').innerText = priceData.sellPrice;
+
+                // Check if price data exists in the response
+                if (priceData && priceData.buyPrice && priceData.sellPrice) {
+                    // Update the price elements with the received data
+                    document.getElementById('buy-price').innerText = priceData.buyPrice;
+                    document.getElementById('sell-price').innerText = priceData.sellPrice;
+                } else {
+                    // Fallback to session variables if price data is missing
+                    document.getElementById('buy-price').innerText = "<?php echo $_SESSION['buyPrice'] ?? 'N/A'; ?>";
+                    document.getElementById('sell-price').innerText = "<?php echo $_SESSION['sellPrice'] ?? 'N/A'; ?>";
+                }
             } else {
                 console.error('Error: ' + xhr.status);
             }
         }
     };
-    xhr.open('GET', 'get_price.php', true);
+    xhr.open('GET', 'admin/price.json', true);
     xhr.send();
 }
 
-// Call updatePrices initially and every 5 seconds (adjust the interval as desired)
 updatePrices();
 setInterval(updatePrices, 5000); // 5 seconds
 </script>
-
-
 </body>
 </html>

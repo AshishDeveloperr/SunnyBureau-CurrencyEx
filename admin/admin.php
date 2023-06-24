@@ -10,15 +10,16 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 
 
-if (isset($_POST['GBPbuybtn'])) {
-  $GBPbuyPrice = $_POST['gbp-buyPrice'];
-  $GBPsellPrice = $_POST['gbp-sellPrice'];
+  if (isset($_POST['GBPbuybtn'])) {
+    $GBPbuyPrice = $_POST['gbp-buyPrice'];
+    $GBPsellPrice = $_POST['gbp-sellPrice'];
+
 
   // Store the updated price values in session variables
   $_SESSION['buyPrice'] = $GBPbuyPrice;
   $_SESSION['sellPrice'] = $GBPsellPrice;
 
-  // Create an associative array to hold the price data
+  // Create an associative array with the price data
   $priceData = [
       'buyPrice' => $GBPbuyPrice,
       'sellPrice' => $GBPsellPrice
@@ -27,7 +28,7 @@ if (isset($_POST['GBPbuybtn'])) {
   // Convert the price data to JSON format
   $jsonData = json_encode($priceData);
 
-  // Store the JSON data in a file (price.json)
+  // Store the JSON data in the price.json file
   file_put_contents('price.json', $jsonData);
 
 }
