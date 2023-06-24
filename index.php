@@ -186,7 +186,7 @@ session_start();
                   <img src="img/europe.png" class="w-32" alt="" srcset="">
                       <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">EUR</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-eur">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 3';
                   $result = mysqli_query($conn, $sql);
@@ -200,7 +200,7 @@ session_start();
                   <!-- buy price -->
                   </td>
                 
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-eur">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 3';
                   $result = mysqli_query($conn, $sql);
@@ -219,7 +219,7 @@ session_start();
                   <img src="img/south-africa.png" class="w-32" alt="" srcset="">
                       <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">ZAR</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-zar">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 4';
                   $result = mysqli_query($conn, $sql);
@@ -233,7 +233,7 @@ session_start();
                   <!-- buy price -->
                   </td>
                 
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-zar">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 4';
                   $result = mysqli_query($conn, $sql);
@@ -280,6 +280,16 @@ function updatePrices() {
                     // Update the price elements with the received data
                     document.getElementById('buy-price-usd').innerText = priceData.USDbuyPrice;
                     document.getElementById('sell-price-usd').innerText = priceData.USDsellPrice;
+                }
+                if (priceData && priceData.EURbuyPrice && priceData.EURsellPrice) {
+                  // Update the price elements with the received data 
+                  document.getElementById('buy-price-eur').innerText = priceData.EURbuyPrice;
+                  document.getElementById('sell-price-eur').innerText = priceData.EURsellPrice;
+                }
+                if (priceData && priceData.ZARbuyPrice && priceData.ZARsellPrice) {
+                  // Update the price elements with the received data
+                  document.getElementById('buy-price-zar').innerText = priceData.ZARbuyPrice;
+                  document.getElementById('sell-price-zar').innerText = priceData.ZARsellPrice;
                 }
             } else {
                 console.error('Error: ' + xhr.status);

@@ -27,6 +27,22 @@ if (isset($_POST['USDbuybtn'])) {
   $_SESSION['USDbuyPrice'] = $USDbuyPrice;
   $_SESSION['USDsellPrice'] = $USDsellPrice;
 }
+if (isset($_POST['EURbuybtn'])) {
+  $EURbuyPrice = $_POST['eur-buyPrice'];
+  $EURsellPrice = $_POST['eur-sellPrice'];
+
+  // store the updated EUR price values in session variables
+  $_SESSION['EURbuyPrice'] = $EURbuyPrice;
+  $_SESSION['EURsellPrice'] = $EURsellPrice;
+}
+if (isset($_POST['ZARbuybtn'])) {
+  $ZARbuyPrice = $_POST['zar-buyPrice'];
+  $ZARsellPrice = $_POST['zar-sellPrice'];
+
+  // store the updated eur price values in session variables
+  $_SESSION['ZARbuyPrice'] = $ZARbuyPrice;
+  $_SESSION['ZARsellPrice'] = $ZARsellPrice;
+}
 
 // Create an associative array with the price data
 $priceData = [
@@ -34,6 +50,10 @@ $priceData = [
   'GBPsellPrice' => $_SESSION['GBPsellPrice'] ?? '',
   'USDbuyPrice' => $_SESSION['USDbuyPrice'] ?? '',
   'USDsellPrice' => $_SESSION['USDsellPrice'] ?? '',
+  'EURbuyPrice' => $_SESSION['EURbuyPrice'] ?? '',
+  'EURsellPrice' => $_SESSION['EURsellPrice'] ?? '',
+  'ZARbuyPrice' => $_SESSION['ZARbuyPrice'] ?? '',
+  'ZARsellPrice' => $_SESSION['ZARsellPrice'] ?? '',
 ];
 
 // Convert the price data to JSON format
@@ -205,7 +225,6 @@ file_put_contents('price.json', $jsonData);
 
           <!-- update php -->
               <?php
-              // if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(isset($_POST['EURbuybtn'])){
                 $EURbuyPrice = $_POST['eur-buyPrice'];
                 $EURsellPrice = $_POST['eur-sellPrice'];
@@ -218,7 +237,6 @@ file_put_contents('price.json', $jsonData);
                   echo "error";
                 }
               }
-              // }
               ?>
             <form action="" method="POST" class="md:w-2/3 flex flex-col mx-auto">
               <div class="flex pb-4">
