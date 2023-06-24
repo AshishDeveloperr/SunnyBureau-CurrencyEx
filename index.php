@@ -1,7 +1,5 @@
 <?php include "admin/config.php";
-
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -79,20 +77,20 @@ session_start();
         .buy-txt{
               color:#31C832;
             }
-            .sell-txt{
-              color:#D22B2B;
-            }
+        .sell-txt{
+          color:#D22B2B;
+        }
     </style>
 </head>
 <body class="h-screen bg-[#0F172A]">
 <div class="w-full">
-  <div class="grid grid-cols-4 -mt-7">
+  <!-- <div class="grid grid-cols-4 -mt-7">
       <div class="col-span-4 md:col-span-1 px-10 flex justify-center md:justify-normal"><img src="img/logo-transparent.png" alt="logo" class="w-52"></div>
       <div class="flex col-span-4 md:col-span-3 px-1 justify-center md:justify-normal md:pt-24"></div>
-  </div>
+  </div> -->
   <div class="container mx-auto">
-      <p class="text-2xl text-white md:text-4xl xl:text-5xl  font-bold pt-3 flex justify-center items-center md:-mt-16 md:pb-5 lg:-mt-36">Sunny Bureau de Change</p>
-      <p class="text-center text-white text-2xl md:text-3xl xl:text-3xl font-bold">Today's Foreign Exchange Rates:</p>
+      <p class="text-2xl text-white md:text-4xl xl:text-7xl  font-bold pt-3 flex justify-center items-center md:pb-5 md:pt-10">Sunny Bureau de Change</p>
+      <p class="text-center text-white text-2xl md:text-3xl xl:text-4xl font-bold">Today's Foreign Exchange Rates:</p>
   </div>
 </div>
 
@@ -106,10 +104,10 @@ session_start();
                   <th scope="col" class="px-6 py-3 font-extrabold text-white text-4xl xl:text-5xl bg-[#0F172A] w-2/5">
                   Currency
                   </th>
-                  <th scope="col" class="px-6 py-3 font-extrabold text-4xl text-white xl:text-5xl bg-[#0F172A] text-center">
+                  <th scope="col" class="px-6 py-3 font-extrabold text-4xl buy-txt xl:text-5xl bg-[#0F172A] text-center">
                       We buy
                   </th>
-                  <th scope="col" class="px-6 py-3 font-extrabold text-4xl text-white xl:text-5xl bg-[#0F172A] text-center">
+                  <th scope="col" class="px-6 py-3 font-extrabold text-4xl sell-txt xl:text-5xl bg-[#0F172A] text-center">
                       We sell
                   </th>
               </tr>
@@ -118,7 +116,7 @@ session_start();
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                       <img src="img/british.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">GBP</span>
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">GBP</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-gbp">
                   <!-- buy price -->
@@ -151,7 +149,7 @@ session_start();
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                   <img src="img/usa.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">USD</span>
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">USD</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-usd">
                   <!-- buy price -->
@@ -184,7 +182,7 @@ session_start();
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                   <img src="img/europe.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">EUR</span>
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">EUR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-eur">
                   <!-- buy price -->
@@ -217,7 +215,7 @@ session_start();
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
                   <img src="img/south-africa.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">ZAR</span>
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">ZAR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-zar">
                   <!-- buy price -->
@@ -277,17 +275,17 @@ function updatePrices() {
                 }
 
                 if (priceData && priceData.USDbuyPrice && priceData.USDsellPrice) {
-                    // Update the price elements with the received data
+                    
                     document.getElementById('buy-price-usd').innerText = priceData.USDbuyPrice;
                     document.getElementById('sell-price-usd').innerText = priceData.USDsellPrice;
                 }
                 if (priceData && priceData.EURbuyPrice && priceData.EURsellPrice) {
-                  // Update the price elements with the received data 
+                  
                   document.getElementById('buy-price-eur').innerText = priceData.EURbuyPrice;
                   document.getElementById('sell-price-eur').innerText = priceData.EURsellPrice;
                 }
                 if (priceData && priceData.ZARbuyPrice && priceData.ZARsellPrice) {
-                  // Update the price elements with the received data
+                  
                   document.getElementById('buy-price-zar').innerText = priceData.ZARbuyPrice;
                   document.getElementById('sell-price-zar').innerText = priceData.ZARsellPrice;
                 }
@@ -301,7 +299,7 @@ function updatePrices() {
 }
 
 updatePrices();
-setInterval(updatePrices, 5000); // 5 seconds
+setInterval(updatePrices, 5000);
 </script>
 
 
