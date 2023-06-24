@@ -7,6 +7,31 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     header("location: login.php");
     exit;
 }
+
+
+
+if (isset($_POST['GBPbuybtn'])) {
+  $GBPbuyPrice = $_POST['gbp-buyPrice'];
+  $GBPsellPrice = $_POST['gbp-sellPrice'];
+
+  // Store the updated price values in session variables
+  $_SESSION['buyPrice'] = $GBPbuyPrice;
+  $_SESSION['sellPrice'] = $GBPsellPrice;
+
+  // Create an associative array to hold the price data
+  $priceData = [
+      'buyPrice' => $GBPbuyPrice,
+      'sellPrice' => $GBPsellPrice
+  ];
+
+  // Convert the price data to JSON format
+  $jsonData = json_encode($priceData);
+
+  // Store the JSON data in a file (price.json)
+  file_put_contents('price.json', $jsonData);
+
+}
+
 ?>
 
 <!DOCTYPE html>

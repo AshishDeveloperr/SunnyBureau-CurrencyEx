@@ -1,4 +1,8 @@
-<?php include "admin/config.php"; ?>
+<?php include "admin/config.php";
+
+session_start();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -116,7 +120,7 @@
                       <img src="img/british.png" class="w-32" alt="" srcset="">
                       <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0">GBP</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 1';
                   $result = mysqli_query($conn, $sql);
@@ -130,7 +134,7 @@
                   <!-- buy price -->
                   </td>
                   
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 1';
                   $result = mysqli_query($conn, $sql);
@@ -258,17 +262,29 @@
 
 
   <script>
-  // Function to refresh the page after 10 seconds
-  function refreshPage() {
-    setTimeout(function () {
-      location.reload();
-    }, 300000); // 10 seconds = 10,000 milliseconds
-  }
+function updatePrices() {
+    // Make an AJAX request to get the latest price from the server
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                // Update the price elements with the received data
+                var priceData = JSON.parse(xhr.responseText);
+                document.getElementById('buy-price').innerText = priceData.buyPrice;
+                document.getElementById('sell-price').innerText = priceData.sellPrice;
+            } else {
+                console.error('Error: ' + xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', 'get_price.php', true);
+    xhr.send();
+}
 
-  // Call the refreshPage function
-  refreshPage();
+// Call updatePrices initially and every 5 seconds (adjust the interval as desired)
+updatePrices();
+setInterval(updatePrices, 5000); // 5 seconds
 </script>
-
 
 
 </body>
