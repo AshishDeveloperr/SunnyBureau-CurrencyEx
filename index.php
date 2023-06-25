@@ -115,10 +115,10 @@ session_start();
           <tbody>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                      <img src="img/british.png" class="w-20 lg:w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl lg:text-7xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-28">GBP</span>
+                      <img src="img/british.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="GBP" srcset="">
+                      <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:pl-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">GBP</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-gbp">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-gbp">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 1';
                   $result = mysqli_query($conn, $sql);
@@ -132,7 +132,7 @@ session_start();
                   <!-- buy price -->
                   </td>
                   
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-gbp">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] sell-txt" id="sell-price-gbp">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 1';
                   $result = mysqli_query($conn, $sql);
@@ -148,10 +148,10 @@ session_start();
               </tr>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                  <img src="img/usa.png" class="w-20 lg:w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl lg:text-7xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-28">USD</span>
+                  <img src="img/usa.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="USD" srcset="">
+                      <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">USD</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-usd">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-usd">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 2';
                   $result = mysqli_query($conn, $sql);
@@ -165,7 +165,7 @@ session_start();
                   <!-- buy price -->
                   </td>
               
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-usd">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] sell-txt" id="sell-price-usd">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 2';
                   $result = mysqli_query($conn, $sql);
@@ -181,10 +181,10 @@ session_start();
               </tr>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                  <img src="img/europe.png" class="w-20 lg:w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl lg:text-7xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-28">EUR</span>
+                  <img src="img/europe.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="EUR" srcset="">
+                      <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">EUR</span>
                   </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-eur">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-eur">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 3';
                   $result = mysqli_query($conn, $sql);
@@ -198,7 +198,7 @@ session_start();
                   <!-- buy price -->
                   </td>
                 
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-eur">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] sell-txt" id="sell-price-eur">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 3';
                   $result = mysqli_query($conn, $sql);
@@ -214,10 +214,10 @@ session_start();
               </tr>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                  <img src="img/south-africa.png" class="w-20 lg:w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl lg:text-7xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-28">ZAR</span>
-                  </th>
-                  <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-zar">
+                  <img src="img/south-africa.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="ZAR" srcset="">
+                      <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">ZAR</span>
+                  </th> 
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-zar">
                   <!-- buy price -->
                 <?php $sql = 'SELECT `buyprice` FROM `currency`  WHERE `sno` = 4';
                   $result = mysqli_query($conn, $sql);
@@ -231,7 +231,7 @@ session_start();
                   <!-- buy price -->
                   </td>
                 
-                  <td class="px-6 py-4 text-center font-semibold text-6xl sell-txt" id="sell-price-zar">
+                  <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] sell-txt" id="sell-price-zar">
                       <!-- sell price -->
               <?php $sql = 'SELECT `sellprice` FROM `currency`  WHERE `sno` = 4';
                   $result = mysqli_query($conn, $sql);
