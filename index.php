@@ -260,46 +260,48 @@ session_start();
 
 
   <script>
-function updatePrices() {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                var priceData = JSON.parse(xhr.responseText);
+document.addEventListener('DOMContentLoaded', function() {
+    function updatePrices() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var priceData = JSON.parse(xhr.responseText);
 
-                // Check if price data exists in the response
-                if (priceData && priceData.GBPbuyPrice && priceData.GBPsellPrice) {
-                    // Update the price elements with the received data
-                    document.getElementById('buy-price-gbp').innerText = priceData.GBPbuyPrice;
-                    document.getElementById('sell-price-gbp').innerText = priceData.GBPsellPrice;
-                }
+                    // Check if price data exists in the response
+                    if (priceData && priceData.GBPbuyPrice && priceData.GBPsellPrice) {
+                        // Update the price elements with the received data
+                        document.getElementById('buy-price-gbp').innerText = priceData.GBPbuyPrice;
+                        document.getElementById('sell-price-gbp').innerText = priceData.GBPsellPrice;
+                    }
 
-                if (priceData && priceData.USDbuyPrice && priceData.USDsellPrice) {
-                    
-                    document.getElementById('buy-price-usd').innerText = priceData.USDbuyPrice;
-                    document.getElementById('sell-price-usd').innerText = priceData.USDsellPrice;
+                    if (priceData && priceData.USDbuyPrice && priceData.USDsellPrice) {
+                        document.getElementById('buy-price-usd').innerText = priceData.USDbuyPrice;
+                        document.getElementById('sell-price-usd').innerText = priceData.USDsellPrice;
+                    }
+                    if (priceData && priceData.EURbuyPrice && priceData.EURsellPrice) {
+                        document.getElementById('buy-price-eur').innerText = priceData.EURbuyPrice;
+                        document.getElementById('sell-price-eur').innerText = priceData.EURsellPrice;
+                    }
+                    if (priceData && priceData.ZARbuyPrice && priceData.ZARsellPrice) {
+                        document.getElementById('buy-price-zar').innerText = priceData.ZARbuyPrice;
+                        document.getElementById('sell-price-zar').innerText = priceData.ZARsellPrice;
+                    }
+                } else {
+                    console.error('Error: ' + xhr.status);
                 }
-                if (priceData && priceData.EURbuyPrice && priceData.EURsellPrice) {
-                  
-                  document.getElementById('buy-price-eur').innerText = priceData.EURbuyPrice;
-                  document.getElementById('sell-price-eur').innerText = priceData.EURsellPrice;
-                }
-                if (priceData && priceData.ZARbuyPrice && priceData.ZARsellPrice) {
-                  
-                  document.getElementById('buy-price-zar').innerText = priceData.ZARbuyPrice;
-                  document.getElementById('sell-price-zar').innerText = priceData.ZARsellPrice;
-                }
-            } else {
-                console.error('Error: ' + xhr.status);
             }
-        }
-    };
-    xhr.open('GET', 'admin/price.json', true);
-    xhr.send();
-}
+        };
+        // xhr.open('GET', 'admin/price.json', true);
+        xhr.open('GET', 'admin/price.json?timestamp=' + new Date().getTime(), true);
+        xhr.send();
+    }
 
-updatePrices();
-setInterval(updatePrices, 5000);
+    updatePrices();
+    setInterval(updatePrices, 5000);
+});
+
+
 </script>
 
 
