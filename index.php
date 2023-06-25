@@ -114,9 +114,9 @@ session_start();
           </thead>
           <tbody>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                      <img src="img/british.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">GBP</span>
+                  <th scope="row" class="px-6 py-4 flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                      <img src="img/british.png" class="w-20 xl:w-32" alt="" srcset="">
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-28">GBP</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-gbp">
                   <!-- buy price -->
@@ -147,9 +147,9 @@ session_start();
                   </td>
               </tr>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                  <img src="img/usa.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">USD</span>
+                  <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <img src="img/usa.png" class="w-20 xl:w-32" alt="" srcset="">
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-28">USD</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-usd">
                   <!-- buy price -->
@@ -180,9 +180,9 @@ session_start();
                   </td>
               </tr>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                  <img src="img/europe.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">EUR</span>
+                  <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <img src="img/europe.png" class="w-20 xl:w-32" alt="" srcset="">
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-28">EUR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-eur">
                   <!-- buy price -->
@@ -213,9 +213,9 @@ session_start();
                   </td>
               </tr>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 col md:flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
-                  <img src="img/south-africa.png" class="w-32" alt="" srcset="">
-                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 xl:pl-14">ZAR</span>
+                  <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <img src="img/south-africa.png" class="w-20 xl:w-32" alt="" srcset="">
+                      <span class="font-bold text-4xl xl:text-5xl text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-28">ZAR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl buy-txt border border-white" id="buy-price-zar">
                   <!-- buy price -->
@@ -292,7 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         };
-        // xhr.open('GET', 'admin/price.json', true);
         xhr.open('GET', 'admin/price.json?timestamp=' + new Date().getTime(), true);
         xhr.send();
     }
