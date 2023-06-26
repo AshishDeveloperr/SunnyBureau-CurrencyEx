@@ -84,18 +84,14 @@ session_start();
 </head>
 <body class="h-screen bg-[#0F172A]">
 <div class="w-full">
-  <!-- <div class="grid grid-cols-4 -mt-7">
-      <div class="col-span-4 md:col-span-1 px-10 flex justify-center md:justify-normal"><img src="img/logo-transparent.png" alt="logo" class="w-52"></div>
-      <div class="flex col-span-4 md:col-span-3 px-1 justify-center md:justify-normal md:pt-24"></div>
-  </div> -->
   <div class="container mx-auto">
-      <p class="text-2xl text-white md:text-4xl xl:text-7xl  font-bold pt-3 flex justify-center items-center md:pb-5 md:pt-10">Sunny Bureau de Change</p>
+      <p class="text-2xl text-white md:text-4xl xl:text-7xl  font-bold pt-3 flex justify-center items-center md:pb-5 md:pt-5">Sunny Bureau de Change</p>
       <p class="text-center text-white text-2xl md:text-3xl xl:text-4xl font-bold">Today's Foreign Exchange Rates:</p>
   </div>
 </div>
 
   <!-- currency starts -->
-<div class="container mx-auto p-2 md:p-8 mt-5">
+<div class="container mx-auto p-2 md:p-5 mt-3">
     
   <div class="relative overflow-x-auto shadow-box">
       <table class="w-full text-sm text-left">
@@ -114,7 +110,7 @@ session_start();
           </thead>
           <tbody>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <th scope="row" class="px-6 py-2 flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
                       <img src="img/british.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="GBP" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:pl-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">GBP</span>
                   </th>
@@ -147,7 +143,7 @@ session_start();
                   </td>
               </tr>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <th scope="row" class="px-6 py-2 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
                   <img src="img/usa.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="USD" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">USD</span>
                   </th>
@@ -180,7 +176,7 @@ session_start();
                   </td>
               </tr>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <th scope="row" class="px-6 py-2 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
                   <img src="img/europe.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="EUR" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">EUR</span>
                   </th>
@@ -213,7 +209,7 @@ session_start();
                   </td>
               </tr>
               <tr class="border-b border-gray-200">
-                  <th scope="row" class="px-6 py-4 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A]">
+                  <th scope="row" class="px-6 py-2 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
                   <img src="img/south-africa.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="ZAR" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">ZAR</span>
                   </th> 
@@ -248,12 +244,12 @@ session_start();
             
           </tbody>
       </table>
-      <span class="text-3xl text-white font-bold justify-end flex pr-5 py-6"><?php $date = date("dS F Y"); echo "$date" ?></span> 
+      <span class="text-3xl text-white font-bold justify-end flex pr-5 py-1"><?php $date = date("dS F Y"); echo "$date" ?></span> 
   </div>
 
 </div>
   <!-- currency ends -->
-  <div class="w-full bg-[#0F172A] p-5   bottom-0 ">
+  <div class="w-full bg-[#0F172A] p-1 bottom-0 ">
     <p class="text-white text-xl text-center font-medium">Copyright 2023 &copy; Sunny Group of Companies</p>
     <p class="text-white text-xl text-center font-medium">Powered by <a href="https://unicybers.com/" class="text-blue-500">Unicybers</a></p> 
   </div>
