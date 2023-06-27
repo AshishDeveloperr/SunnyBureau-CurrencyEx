@@ -111,7 +111,7 @@ session_start();
           <tbody>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-2 flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
-                      <img src="img/british.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="GBP" srcset="">
+                      <img src="img/british.webp" class="w-20 lg:w-32 xl:w-44" alt="GBP" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:pl-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">GBP</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-gbp">
@@ -144,7 +144,7 @@ session_start();
               </tr>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-2 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
-                  <img src="img/usa.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="USD" srcset="">
+                  <img src="img/usa.webp" class="w-20 lg:w-32 xl:w-44" alt="USD" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">USD</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-usd">
@@ -177,7 +177,7 @@ session_start();
               </tr>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-2 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
-                  <img src="img/europe.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="EUR" srcset="">
+                  <img src="img/europe.webp" class="w-20 lg:w-32 xl:w-44" alt="EUR" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">EUR</span>
                   </th>
                   <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-eur">
@@ -210,7 +210,7 @@ session_start();
               </tr>
               <tr class="border-b border-gray-200">
                   <th scope="row" class="px-6 py-2 col flex font-medium text-gray-900 whitespace-nowrap bg-[#0F172A] items-center">
-                  <img src="img/south-africa.png" class="w-20 lg:w-32 xl:w-40 xl:h-32" alt="ZAR" srcset="">
+                  <img src="img/south-africa.webp" class="w-20 lg:w-32 xl:w-44" alt="ZAR" srcset="">
                       <span class="font-bold text-4xl lg:text-7xl xl:text-[7rem] text-white md:p-6 mx-auto flex justify-center md:mx-0 lg:pl-12 xl:pl-20">ZAR</span>
                   </th> 
                   <td class="px-6 py-4 text-center font-semibold text-6xl xl:text-[7rem] buy-txt border border-white" id="buy-price-zar">
