@@ -252,7 +252,7 @@ session_start();
             
           </tbody>
       </table>
-      <span class="text-3xl text-white font-bold justify-end flex pr-5 py-1"><?php $date = date("dS F Y"); echo "$date" ?></span> 
+      <span id="current-date" class="text-3xl text-white font-bold justify-end flex pr-5 py-1"></span>
   </div>
 
 </div>
@@ -304,7 +304,29 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updatePrices, 5000);
 });
 
+// display current date
+var currentDate = new Date();
 
+var day = currentDate.getDate();
+var month = currentDate.toLocaleString('default', { month: 'long' });
+var year = currentDate.getFullYear();
+
+var dayWithSuffix = day + getDaySuffix(day);
+
+var formattedDate = dayWithSuffix + ' ' + month + ' ' + year;
+document.getElementById("current-date").textContent = formattedDate;
+
+function getDaySuffix(day) {
+  var suffix = "th";
+  if (day === 1 || day === 21 || day === 31) {
+    suffix = "st";
+  } else if (day === 2 || day === 22) {
+    suffix = "nd";
+  } else if (day === 3 || day === 23) {
+    suffix = "rd";
+  }
+  return suffix;
+}
 </script>
 
 
